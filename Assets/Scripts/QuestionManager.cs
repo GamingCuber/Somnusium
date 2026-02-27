@@ -1,5 +1,7 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class QuestionManager : MonoBehaviour
@@ -48,5 +50,12 @@ public class QuestionManager : MonoBehaviour
         {
             Debug.Log("Incorrect Answer!");
         }
+        Invoke(nameof(exitScene), 3f);
+    }
+
+    private void exitScene()
+    {
+        SceneManager.LoadScene(playerData.currentLevel);
+
     }
 }
