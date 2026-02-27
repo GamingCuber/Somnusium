@@ -288,6 +288,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d5dfd8f3fc2f98059b50cb2dfa1bf13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyBody: {fileID: 0}
+  enemyCollider: {fileID: 0}
+  horizontalOffset: 10
+  verticalOffset: 10
+  maxposx: 0
+  maxposy: 0
 --- !u!61 &489501626
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -444,6 +450,7 @@ GameObject:
   - component: {fileID: 669668663}
   - component: {fileID: 669668662}
   - component: {fileID: 669668661}
+  - component: {fileID: 669668666}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -611,6 +618,19 @@ Transform:
   - {fileID: 307249095}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &669668666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669668660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cf3f4bae88f06e9b97aa697988f9c76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerData: {fileID: 11400000, guid: d6fb304299372677b87b84c7fa8c55bc, type: 2}
 --- !u!1 &1681793294
 GameObject:
   m_ObjectHideFlags: 0
