@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5786b8257f342a8efbaa5fb25aeca731, type: 3}
+  m_Name: QuestionDatabase
+  m_EditorClassIdentifier: 
+  questionImages:
+  - {fileID: -3427332452855026627, guid: 99e7275b4aa262bfcb39792bc28f1f26, type: 3}
+  questionTexts:
+  - "hx \u2212 4y = \u221210  kx + 3y = \u221215  If the graphs of the lines in this
+    system of equations intersect at (\u20133, 1), what is the value of k/h?"
+  option1Texts:
+  - 1/3
+  option2Texts:
+  - 2
+  option3Texts:
+  - 3
+  option4Texts:
+  - 6
+  correctOptions: 02000000
