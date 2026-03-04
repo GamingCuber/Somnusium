@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: PlayerData
   m_EditorClassIdentifier: 
   currentQuestionIndex: 11
-  sleepAmount: 0
+  sleepCounter: 100
+  deprivationAmount: 15
+  sleepingAmount: 25
   currentLevel: MainScene
