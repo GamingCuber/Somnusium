@@ -8,6 +8,11 @@ public class PlayerMovement : MonoBehaviour
     public Collider2D playerCollider;
     public float speedrate = 0.01f;
     public UnityEngine.Vector2 movementVector;
+    public AudioSource audioSource;
+    void Start()
+    {
+        audioSource.volume = 0;
+    } 
 
     // Update is called once per frame
     void Update()
@@ -20,6 +25,13 @@ public class PlayerMovement : MonoBehaviour
         if (movementVector.magnitude > 1)
         {
             movementVector = movementVector.normalized;
+        }
+        if (movementVector.x == 0 && movementVector.y == 0)
+        {
+            audioSource.volume = 0;
+        } else
+        {
+            audioSource.volume = 0.5f;
         }
 
         playerBody.MovePosition(transform.position + (UnityEngine.Vector3) movementVector * speedrate);

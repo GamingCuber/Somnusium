@@ -2,17 +2,19 @@ using UnityEngine;
 
 public class LightbulbDrop : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject bulbDrop;
+    public GameObject bulbDrop;
     public AudioSource breakSound;
+
+    void Start()
+    {
+        breakSound = gameObject.GetComponent<AudioSource>();
+    }
 
     public void dropItem()
     {
         Instantiate(bulbDrop);
-        breakSound.Play(0);
-        Invoke(nameof(destroyObject), 0.5f);
+        Invoke(nameof(destroyObject), 2f);
         Destroy(gameObject);
-        
     }
 
     private void destroyObject()

@@ -17,12 +17,14 @@ public class SwingScript : MonoBehaviour
     public PlayerData playerData;
     private GameObject player;
     private Vector2 weaponPosition;
+    private AudioSource audioSource;
 
     void Start() 
     {
         player = GameObject.FindGameObjectWithTag("Player");
         weaponPosition = new Vector2();
         canSwing = true;
+        audioSource = gameObject.GetComponent<AudioSource>();
     }
 
     void Update()
@@ -46,6 +48,7 @@ public class SwingScript : MonoBehaviour
         transform.position = weaponPosition;
         if (Input.GetKeyDown(KeyCode.Mouse0) && !isSwinging && canSwing)
         {
+            audioSource.Play();
             isSwinging = true;
             Invoke(nameof(stopSwing), timeOut);
         }
