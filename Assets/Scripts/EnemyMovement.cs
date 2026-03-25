@@ -7,20 +7,23 @@ public class EnemyMovement : MonoBehaviour
     public Rigidbody2D PlayerRb;
     public Rigidbody2D MyRb;
     public float speed;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public float health;
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (Time.timeScale == 1)
         {
-          transform.position = Vector3.MoveTowards(transform.position, PlayerRb.transform.position, speed);    
+            transform.position = Vector3.MoveTowards(transform.position, PlayerRb.transform.position, speed);    
         }
-       
-       
+    }
+
+    public void hurtEnemy(float damage)
+    {
+        health -= damage;
+        if (health <= 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

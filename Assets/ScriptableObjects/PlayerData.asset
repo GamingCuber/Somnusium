@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a45506f19abe9377a9c0e9009067e1a, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: 
+  hasPencil: 0
+  damageDealt: 3
   currentQuestionIndex: 11
   sleepCounter: 100
   deprivationAmount: 15
   sleepingAmount: 25
   currentLevel: MainScene
+  signText: 

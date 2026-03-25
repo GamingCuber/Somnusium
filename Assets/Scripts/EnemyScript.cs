@@ -22,7 +22,7 @@ public class EnemyScript : MonoBehaviour
         questionType = rng.Next(1, 3);
     }
 
-    private void OnTriggerEnter2D(UnityEngine.Collider2D collision)
+    private void OnCollisionEnter2D(UnityEngine.Collision2D collision)
     {
         if (collision.gameObject.tag.Equals("Player"))
         {

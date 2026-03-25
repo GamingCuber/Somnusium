@@ -9,19 +9,11 @@ public class PlayerMovement : MonoBehaviour
     public float speedrate = 0.01f;
     public UnityEngine.Vector2 movementVector;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
         movementVector.x = Input.GetAxisRaw("Horizontal");
         movementVector.y = Input.GetAxisRaw("Vertical");
-
-
     }
     void FixedUpdate()
     {
