@@ -1374,7 +1374,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerRb: {fileID: 669668661}
   MyRb: {fileID: 489501627}
-  speed: 0.1
+  speed: 0.04
   health: 5
 --- !u!1 &507666019
 GameObject:
@@ -39637,9 +39637,11 @@ GameObject:
   - component: {fileID: 1547037675}
   - component: {fileID: 1547037674}
   - component: {fileID: 1547037676}
+  - component: {fileID: 1547037678}
+  - component: {fileID: 1547037677}
   m_Layer: 0
   m_Name: Pedestal
-  m_TagString: Untagged
+  m_TagString: Sign
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39761,6 +39763,36 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.26, y: 0.94}
   m_EdgeRadius: 0
+--- !u!114 &1547037677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1547037673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca3472500d54ed11aac0c5d7991aa7a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signText: Click "F" to get your weapon!
+  distanceUntilText: 3
+  dialogueBox: {fileID: 71096213}
+  playerData: {fileID: 11400000, guid: d6fb304299372677b87b84c7fa8c55bc, type: 2}
+  playerPosition: {fileID: 669668665}
+--- !u!114 &1547037678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1547037673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d48cb0a1a89ba82d0a000f103f224cdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerData: {fileID: 11400000, guid: d6fb304299372677b87b84c7fa8c55bc, type: 2}
 --- !u!1 &1605260027
 GameObject:
   m_ObjectHideFlags: 0

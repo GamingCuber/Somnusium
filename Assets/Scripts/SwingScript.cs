@@ -19,7 +19,7 @@ public class SwingScript : MonoBehaviour
     private Vector2 weaponPosition;
     private AudioSource audioSource;
 
-    void Start() 
+    void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         weaponPosition = new Vector2();
@@ -29,32 +29,34 @@ public class SwingScript : MonoBehaviour
 
     void Update()
     {
-        checkDirection();
-        switch (currentDirection)
+        if (playerData.hasPencil)
         {
-            case 0:
-                weaponPosition = player.transform.position + (Vector3) Vector2.left * distanceFromPlayer;
-                break;
-            case 1:
-                weaponPosition = player.transform.position + (Vector3) Vector2.up * distanceFromPlayer;
-                break;
-            case 2:
-                weaponPosition = player.transform.position + (Vector3) Vector2.right * distanceFromPlayer;
-                break;
-            case 3:
-                weaponPosition = player.transform.position +  (Vector3) Vector2.down * distanceFromPlayer;
-                break;            
+            checkDirection();
+            switch (currentDirection)
+            {
+                case 0:
+                    weaponPosition = player.transform.position + (Vector3)Vector2.left * distanceFromPlayer;
+                    break;
+                case 1:
+                    weaponPosition = player.transform.position + (Vector3)Vector2.up * distanceFromPlayer;
+                    break;
+                case 2:
+                    weaponPosition = player.transform.position + (Vector3)Vector2.right * distanceFromPlayer;
+                    break;
+                case 3:
+                    weaponPosition = player.transform.position + (Vector3)Vector2.down * distanceFromPlayer;
+                    break;
+            }
+            transform.position = weaponPosition;
+            if (Input.GetKeyDown(KeyCode.Mouse0) && !isSwinging && canSwing)
+            {
+                audioSource.Play();
+                isSwinging = true;
+                Invoke(nameof(stopSwing), timeOut);
+            }
+            gameObject.GetComponent<BoxCollider2D>().enabled = isSwinging;
+            gameObject.GetComponent<SpriteRenderer>().enabled = isSwinging;
         }
-        transform.position = weaponPosition;
-        if (Input.GetKeyDown(KeyCode.Mouse0) && !isSwinging && canSwing)
-        {
-            audioSource.Play();
-            isSwinging = true;
-            Invoke(nameof(stopSwing), timeOut);
-        }
-        gameObject.GetComponent<BoxCollider2D>().enabled = isSwinging;
-        gameObject.GetComponent<SpriteRenderer>().enabled = isSwinging;
-
     }
 
     private void stopSwing()
@@ -66,7 +68,7 @@ public class SwingScript : MonoBehaviour
 
     private void enableSwinging()
     {
-        
+
         canSwing = true;
     }
 
@@ -76,15 +78,15 @@ public class SwingScript : MonoBehaviour
         {
             currentDirection = 1;
         }
-         if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
             currentDirection = 0;
         }
-         if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
         {
             currentDirection = 3;
         }
-         if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
         {
             currentDirection = 2;
         }
@@ -101,5 +103,5 @@ public class SwingScript : MonoBehaviour
             collision.gameObject.GetComponent<EnemyMovement>().hurtEnemy(playerData.damageDealt);
         }
     }
-    
+
 }
