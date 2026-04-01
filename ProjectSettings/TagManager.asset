@@ -17,8 +17,8 @@ TagManager:
   - Enemy
   - Destructible
   - Weapon
-  - 
-  - 
+  - EnemyTrigger
+  - Pedestal
   - 
   - 
   - 

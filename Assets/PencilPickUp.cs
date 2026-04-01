@@ -20,6 +20,7 @@ public class PencilPickUp : MonoBehaviour
         {
             playerData.hasPencil = true;
             pencil.SetActive(true);
+            Destroy(this);
         }
     }
 }

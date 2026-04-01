@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 00e5554e8d9083e3bbfac1184cf65b63
+guid: 6e63f7fa39ecdb772ae0b742f7e00d18
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9107375033425576051
-    second: vivi_0
+      213: 79272448942056078
+    second: pencil_weapon_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: vivi_0
+      name: pencil_weapon_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 672
-        height: 936
+        x: 21
+        y: 14
+        width: 18
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d8f3868f8aa1c9180800000000000000
-      internalID: -9107375033425576051
+      spriteID: e82aaaf4fd1a91100800000000000000
+      internalID: 79272448942056078
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      vivi_0: -9107375033425576051
+      pencil_weapon_0: 79272448942056078
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

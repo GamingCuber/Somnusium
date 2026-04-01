@@ -10,8 +10,11 @@ public class TriggerSign : MonoBehaviour
     public GameObject dialogueBox;
     public PlayerData playerData;
     public Transform playerPosition;
+    private TMP_Text dialogueBoxText;
     void Start()
     {
+        dialogueBoxText = dialogueBox.transform.GetChild(0).GetComponent<TMP_Text>();
+
         dialogueBox.SetActive(false);
     }
 
@@ -21,9 +24,20 @@ public class TriggerSign : MonoBehaviour
         float distance = Vector2.Distance(closestSign.transform.position, playerPosition.position);
         if (distance <= distanceUntilText)
         {
-            playerData.signText = signText;
-            dialogueBox.SetActive(true);
-            dialogueBox.transform.GetChild(0).GetComponent<TMP_Text>().text = signText;
+            if (closestSign.layer.Equals(LayerMask.NameToLayer("Pedestal")) && playerData.hasPencil)
+            {  
+                playerData.signText = "You picked it up! Press left click to attack!";
+                signText = playerData.signText;
+                dialogueBox.SetActive(true);
+                dialogueBoxText.text = signText;
+
+            } else
+            {
+                playerData.signText = signText;
+                dialogueBox.SetActive(true);
+                dialogueBoxText.text = signText;
+            }
+            
         } else
         {
             dialogueBox.SetActive(false);

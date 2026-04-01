@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 77be5a23e545e2f02a64fd089296061e
+guid: 5c9a3f5099af728729f66425c073c500
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7617071647768197078
-    second: flowing-water_0
+      213: 5726492646062283541
+    second: thomas jefferson_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: flowing-water_0
+      name: thomas jefferson_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 992
-        height: 496
+        width: 474
+        height: 266
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a28c31e71b9ba4690800000000000000
-      internalID: -7617071647768197078
+      spriteID: 51bdd69a8b6987f40800000000000000
+      internalID: 5726492646062283541
       vertices: []
       indices: 
       edges: []
@@ -135,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      flowing-water_0: -7617071647768197078
+      thomas jefferson_0: 5726492646062283541
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

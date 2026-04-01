@@ -4,17 +4,22 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    public Rigidbody2D PlayerRb;
+    public GameObject player;
     public Rigidbody2D MyRb;
     public float speed;
     public float health;
+
+    void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
 
     // Update is called once per frame
     void FixedUpdate()
     {
         if (Time.timeScale == 1)
         {
-            transform.position = Vector3.MoveTowards(transform.position, PlayerRb.transform.position, speed);    
+            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed);    
         }
     }
 

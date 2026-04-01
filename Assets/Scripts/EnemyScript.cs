@@ -27,14 +27,9 @@ public class EnemyScript : MonoBehaviour
         if (collision.gameObject.tag.Equals("Player"))
         {
             playerData.currentLevel = SceneManager.GetActiveScene().name;
-            int difficulty = playerData.sleepCounter / 20;
-            playerData.currentQuestionIndex = questionType + (difficulty) * 5;
-            playerData.currentQuestionIndex = 0;
-
-
-            Debug.Log("question type" + questionType);
-            Debug.Log("difficulty" + difficulty);
-            Debug.Log("current question" + playerData.currentQuestionIndex);
+            // int difficulty = playerData.sleepCounter / 20;
+            playerData.currentQuestionIndex = questionType ;
+            // + (difficulty) * 5;
             SceneManager.LoadScene("ProblemScene");
 
             Destroy(this);

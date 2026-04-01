@@ -39,9 +39,11 @@ public class SwingScript : MonoBehaviour
                     break;
                 case 1:
                     weaponPosition = player.transform.position + (Vector3)Vector2.up * distanceFromPlayer;
+
                     break;
                 case 2:
                     weaponPosition = player.transform.position + (Vector3)Vector2.right * distanceFromPlayer;
+
                     break;
                 case 3:
                     weaponPosition = player.transform.position + (Vector3)Vector2.down * distanceFromPlayer;
@@ -52,6 +54,24 @@ public class SwingScript : MonoBehaviour
             {
                 audioSource.Play();
                 isSwinging = true;
+                switch (currentDirection)
+                {
+                    case 0:
+                        gameObject.transform.rotation = Quaternion.identity;
+                        gameObject.transform.Rotate(0, 0, 90);
+                        break;
+                    case 2:
+                        gameObject.transform.rotation = Quaternion.identity;
+                        gameObject.transform.Rotate(0, 0, 270);
+                        break;
+                    case 3:
+                        gameObject.transform.rotation = Quaternion.identity;
+                        gameObject.transform.Rotate(0, 0, 180);
+                        break;
+                    default:
+                        gameObject.transform.rotation = Quaternion.identity;
+                        break;
+                }
                 Invoke(nameof(stopSwing), timeOut);
             }
             gameObject.GetComponent<BoxCollider2D>().enabled = isSwinging;
