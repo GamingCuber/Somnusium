@@ -10,6 +10,7 @@ public class PencilPickUp : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         pencil = GameObject.FindGameObjectWithTag("Weapon");
+        playerData.hasPencil = false;
         pencil.SetActive(false);
     }
 

@@ -34,6 +34,8 @@ public class QuestionManager : MonoBehaviour
 
     }
 
+    
+
     public void onOptionSelected(int option)
     {
         selectedOption = option;
@@ -45,17 +47,21 @@ public class QuestionManager : MonoBehaviour
         if (selectedOption == correctOption)
         {
             Debug.Log("Correct Answer!");
+            Invoke(nameof(GoToLevelScene), 3f);
         }
         else
         {
             Debug.Log("Incorrect Answer!");
+            Invoke(nameof(GoToLoseScene), 3f);
         }
-        Invoke(nameof(exitScene), 3f);
     }
 
-    private void exitScene()
+    private void GoToLoseScene()
+    {
+        SceneManager.LoadScene("LossScreen");
+    }
+    private void GoToLevelScene()
     {
         SceneManager.LoadScene(playerData.currentLevel);
-
     }
 }

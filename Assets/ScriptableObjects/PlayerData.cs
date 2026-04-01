@@ -6,7 +6,7 @@ public class PlayerData : ScriptableObject
     public bool hasPencil;
     public int damageDealt;
 
-    public int currentQuestionIndex = 1;
+    public int currentQuestionIndex;
 
     public int sleepCounter = 0;
     public int deprivationAmount;

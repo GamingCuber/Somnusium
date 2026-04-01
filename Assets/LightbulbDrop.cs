@@ -13,8 +13,7 @@ public class LightbulbDrop : MonoBehaviour
     public void dropItem()
     {
         Instantiate(bulbDrop);
-        Invoke(nameof(destroyObject), 2f);
-        Destroy(gameObject);
+        Invoke(nameof(destroyObject), 0.01f);
     }
 
     private void destroyObject()

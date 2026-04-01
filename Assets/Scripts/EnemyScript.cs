@@ -28,7 +28,7 @@ public class EnemyScript : MonoBehaviour
         {
             playerData.currentLevel = SceneManager.GetActiveScene().name;
             // int difficulty = playerData.sleepCounter / 20;
-            playerData.currentQuestionIndex = questionType ;
+            playerData.currentQuestionIndex = questionType - 1;
             // + (difficulty) * 5;
             SceneManager.LoadScene("ProblemScene");
 

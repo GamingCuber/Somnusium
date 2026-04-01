@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DecisionScreenManager : MonoBehaviour
 {
@@ -11,6 +12,15 @@ public class DecisionScreenManager : MonoBehaviour
     public void OnSleepButton()
     {
         playerData.sleepCounter += playerData.sleepingAmount;
+    }
+    public void OnMainMenuButton()
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
+
+    public void OnRestartButton()
+    {
+        SceneManager.LoadScene("MainScene");
     }
 
     private void nextLevel()

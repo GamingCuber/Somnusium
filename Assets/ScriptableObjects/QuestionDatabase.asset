@@ -20,17 +20,23 @@ MonoBehaviour:
     system of equations intersect at (\u20133, 1), what is the value of k/h?"
   - Thomas Jefferson, in Notes on the State of Virginia, argued for polygenesis.
     What is polygenesis?
+  - The team met its fundraising goal; ______, it postponed the purchase to compare
+    vendors.
   option1Texts:
   - 1/3
   - The belief that environmental changes would lead to changes in race
+  - moreover
   option2Texts:
   - 2
   - The belief in a universal equality of all human nature
+  - however
   option3Texts:
   - 3
   - The belief that African descended peoples were created separately from European
     descended peoples
+  - therefore
   option4Texts:
   - 6
   - The belief in the inevitability of race war and the extinction of weaker races
-  correctOptions: 0300000003000000
+  - for example
+  correctOptions: 030000000300000002000000
