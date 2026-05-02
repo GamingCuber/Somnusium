@@ -1,5 +1,7 @@
 using System.Collections;
 using TMPro;
+using Unity.VisualScripting;
+using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -8,6 +10,12 @@ public class QuestionManager : MonoBehaviour
 {
     private int selectedOption;
     private int correctOption;
+    [SerializeField]
+    private AudioSource soundPlayer;
+    [SerializeField]
+    private AudioClip errorSound;
+    [SerializeField]
+    private AudioClip correctSound;
 
     public Image questionImage;
     public PlayerData playerData;
@@ -44,13 +52,21 @@ public class QuestionManager : MonoBehaviour
 
     private void checkAnswer()
     {
+        TMP_Text[] textObjectList = {option1Text, option2Text, option3Text, option4Text};
+        Image selectedButton = textObjectList[selectedOption - 1].transform.GetComponentInParent<Image>();
         if (selectedOption == correctOption)
         {
+            selectedButton.color = Color.green;
+            soundPlayer.clip = correctSound;
+            soundPlayer.Play();
             Debug.Log("Correct Answer!");
             Invoke(nameof(GoToLevelScene), 3f);
         }
         else
         {
+            selectedButton.color = Color.red;
+            soundPlayer.clip = errorSound;
+            soundPlayer.Play();
             Debug.Log("Incorrect Answer!");
             Invoke(nameof(GoToLoseScene), 3f);
         }

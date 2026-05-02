@@ -27,9 +27,8 @@ public class TriggerSign : MonoBehaviour
             if (closestSign.layer.Equals(LayerMask.NameToLayer("Pedestal")) && playerData.hasPencil)
             {  
                 playerData.signText = "You picked it up! Press left click to attack!";
-                signText = playerData.signText;
                 dialogueBox.SetActive(true);
-                dialogueBoxText.text = signText;
+                dialogueBoxText.text = playerData.signText;
 
             } else
             {

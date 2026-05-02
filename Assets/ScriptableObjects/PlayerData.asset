@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasPencil: 1
   damageDealt: 3
-  currentQuestionIndex: 1
+  currentQuestionIndex: 0
   sleepCounter: 100
   deprivationAmount: 15
   sleepingAmount: 25
   currentLevel: MainScene
-  signText: You picked it up!
+  signText: There's a Treasure over there. It's a shame you can't get it :)

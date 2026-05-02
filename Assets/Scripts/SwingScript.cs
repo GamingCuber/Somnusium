@@ -88,7 +88,6 @@ public class SwingScript : MonoBehaviour
 
     private void enableSwinging()
     {
-
         canSwing = true;
     }
 

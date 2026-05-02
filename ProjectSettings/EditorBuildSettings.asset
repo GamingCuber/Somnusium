@@ -17,6 +17,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: 5a14b2f6bcd80e9c1a182ebe31ab0cfe
+  - enabled: 1
+    path: Assets/Scenes/DecisionScreen.unity
+    guid: b15678ab3b228b0e99694324839216ac
+  - enabled: 1
+    path: Assets/Scenes/LossScreen.unity
+    guid: d038e90ef66095364b27513bbabae0e0
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

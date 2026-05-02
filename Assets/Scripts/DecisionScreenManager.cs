@@ -7,10 +7,12 @@ public class DecisionScreenManager : MonoBehaviour
     public void OnDepriveButton()
     {
         playerData.sleepCounter -= playerData.deprivationAmount;
+        OnMainMenuButton();
     }
 
     public void OnSleepButton()
     {
+        OnMainMenuButton();
         playerData.sleepCounter += playerData.sleepingAmount;
     }
     public void OnMainMenuButton()
@@ -21,10 +23,5 @@ public class DecisionScreenManager : MonoBehaviour
     public void OnRestartButton()
     {
         SceneManager.LoadScene("MainScene");
-    }
-
-    private void nextLevel()
-    {
-        // TODO
     }
 }
